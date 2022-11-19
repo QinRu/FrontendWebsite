@@ -4,7 +4,7 @@
       <q-input
           filled
           v-model="name"
-          label="Please enter your name"
+          label="Please enter the date"
           class="inputBox"
       />
       <q-btn label="Submit" type="submit" color="bg-grey-9" flat class="q-ml-sm"/>
@@ -12,16 +12,20 @@
     <div class="row">
       <div class="col colFirst">
         <div class="display-box">
-          <div class="dis-title">Total Following</div>
+          <div class="dis-title">Total Users</div>
+          <div class="dis-value">{{ totalUser }}</div>
         </div>
         <div class="display-box">
-          <div class="dis-title">Total Followers</div>
+          <div class="dis-title">Total Sales</div>
+          <div class="dis-value">{{ totalSales }}</div>
         </div>
         <div class="display-box">
-          <div class="dis-title">Joined Dated</div>
+          <div class="dis-title">Dated</div>
+          <div class="dis-value">{{ date }}</div>
         </div>
         <div class="display-box">
           <div class="dis-title">Location</div>
+          <div class="dis-value">{{ location }}</div>
         </div>
       </div>
       <div class="col-5 colSecond">
@@ -42,10 +46,16 @@ import * as echarts from 'echarts';
 import areaChart from './Components/AreaChart';
 import chart from './Components/Chart';
 
-console.log(333);
-
 export default {
   name: "Dashboard",
+  data() {
+    return {
+      totalUser: 1024,
+      totalSales: 20210,
+      date: '2022-11-20',
+      location: 'Nan Chong'
+    }
+  },
   components: {
     areaChart,
     chart
@@ -62,7 +72,6 @@ export default {
 
 .colThird {
 }
-
 .inputBox {
   width: 80%;
 }

@@ -3,9 +3,6 @@ import * as echarts from 'echarts';
 //chart.vue
 export default   {
     color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
-    title: {
-        text: 'Gradient Stacked Area Chart'
-    },
     tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -16,12 +13,7 @@ export default   {
         }
     },
     legend: {
-        data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
-    },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
+        data: ['Shirt', 'Sweater', 'Coat', 'Pants', 'Socks']
     },
     grid: {
         left: '3%',
@@ -43,7 +35,7 @@ export default   {
     ],
     series: [
         {
-            name: 'Line 1',
+            name: 'Shirt',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -70,7 +62,7 @@ export default   {
             data: [140, 232, 101, 264, 90, 340, 250]
         },
         {
-            name: 'Line 2',
+            name: 'Sweater',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -97,7 +89,7 @@ export default   {
             data: [120, 282, 111, 234, 220, 340, 310]
         },
         {
-            name: 'Line 3',
+            name: 'Coat',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -124,7 +116,7 @@ export default   {
             data: [320, 132, 201, 334, 190, 130, 220]
         },
         {
-            name: 'Line 4',
+            name: 'Pants',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -151,7 +143,7 @@ export default   {
             data: [220, 402, 231, 134, 190, 230, 120]
         },
         {
-            name: 'Line 5',
+            name: 'Socks',
             type: 'line',
             stack: 'Total',
             smooth: true,
@@ -183,23 +175,19 @@ export default   {
         }
     ]
 };
-
 //area chat.vue
 export const areaChartData = {
-    title: {
-        text: 'ECharts 入门示例'
-    },
     tooltip: {},
     legend: {
-        data: ['销量']
+        data: ['sales']
     },
     xAxis: {
-        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+        data: ['shirt', 'sweater', 'coat', 'pants', 'heels', 'socks']
     },
     yAxis: {},
     series: [
         {
-            name: '销量',
+            name: 'sales',
             type: 'bar',
             data: [5, 20, 36, 10, 10, 20]
         }

@@ -17,7 +17,6 @@ export default {
   mounted() {
     if (!this.myChart)
       this.myChart = echarts.init(document.getElementById('chart'));
-
     this.myChart.setOption(option);
   }
 }
